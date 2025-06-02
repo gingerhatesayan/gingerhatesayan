@@ -9,9 +9,8 @@
   <style>
     :root {
       --pastel-orange: #ffe5b4;
-      --green: #228B22;
-      --red: #B22222;
-      --dark-red: #8B0000;
+      --option-bg: #8B0000; /* Matching the heading color */
+      --hover-bg: #660000;
     }
 
     * {
@@ -25,32 +24,32 @@
       font-family: 'Playfair Display', serif;
       background-color: var(--pastel-orange);
       color: #333;
-      overflow: hidden;
     }
 
     body {
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding-top: 60px;
+      justify-content: flex-start;
     }
 
     .container {
       text-align: center;
       width: 100%;
+      margin-top: 100px; /* shifted downward */
       animation: fadeIn 1.5s ease;
     }
 
     h1 {
       font-size: 3rem;
-      color: var(--dark-red);
+      color: var(--option-bg);
       margin-bottom: 20px;
     }
 
     p {
       font-size: 1.7rem;
       color: #444;
-      margin-bottom: 60px;
+      margin-bottom: 50px;
     }
 
     .options {
@@ -59,13 +58,12 @@
       flex-wrap: wrap;
       gap: 40px;
       animation: floatIn 1.5s ease;
-      margin-top: 50px;
     }
 
     .options a {
       text-decoration: none;
       color: white;
-      background: linear-gradient(135deg, var(--green), var(--red));
+      background: var(--option-bg);
       padding: 50px 60px;
       font-size: 2rem;
       border-radius: 20px;
@@ -88,7 +86,7 @@
     }
 
     .options a:hover {
-      background: linear-gradient(135deg, #006400, var(--dark-red));
+      background: var(--hover-bg);
       transform: scale(1.08);
       box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
     }
