@@ -9,7 +9,7 @@
   <style>
     :root {
       --pastel-orange: #ffe5b4;
-      --option-bg: #8B0000; /* Matching the heading color */
+      --option-bg: #8B0000;
       --hover-bg: #660000;
     }
 
@@ -36,7 +36,7 @@
     .container {
       text-align: center;
       width: 100%;
-      margin-top: 100px; /* shifted downward */
+      margin-top: 100px;
       animation: fadeIn 1.5s ease;
     }
 
@@ -89,7 +89,6 @@
       background: var(--hover-bg);
       transform: scale(1.12);
       box-shadow: 0 20px 35px rgba(0, 0, 0, 0.4);
-      animation: pop 0.3s ease-in-out;
     }
 
     @keyframes fadeIn {
@@ -100,12 +99,6 @@
     @keyframes floatIn {
       from { opacity: 0; transform: translateY(30px); }
       to { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes pop {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.12); }
-      100% { transform: scale(1.12); }
     }
 
     footer {
