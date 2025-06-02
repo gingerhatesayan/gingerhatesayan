@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Website Builder</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a2e0f1f95b.js" crossorigin="anonymous"></script>
   <style>
     :root {
       --pastel-orange: #ffe5b4;
@@ -13,17 +14,28 @@
       --dark-red: #8B0000;
     }
 
-    body {
-      font-family: 'Playfair Display', serif;
+    * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
+    }
+
+    html, body {
+      height: 100%;
+      font-family: 'Playfair Display', serif;
       background-color: var(--pastel-orange);
       color: #333;
     }
 
+    body {
+      display: flex;
+      flex-direction: column;
+    }
+
     .container {
-      max-width: 900px;
-      margin: 0 auto;
+      flex: 1;
+      max-width: 1000px;
+      margin: auto;
       padding: 40px 20px;
       text-align: center;
     }
@@ -37,26 +49,33 @@
     p {
       font-size: 1.5rem;
       color: #444;
-      margin-bottom: 40px;
+      margin-bottom: 50px;
     }
 
     .options {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-      gap: 30px;
+      gap: 40px;
     }
 
     .options a {
       text-decoration: none;
       color: white;
       background: linear-gradient(135deg, var(--green), var(--red));
-      padding: 25px 40px;
-      font-size: 1.4rem;
+      padding: 30px 40px;
+      font-size: 1.3rem;
       border-radius: 15px;
       transition: transform 0.3s ease, background 0.3s ease;
-      box-shadow: 0 6px 12px rgba(0,0,0,0.2);
-      min-width: 200px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      min-width: 220px;
+      text-align: center;
+    }
+
+    .options a i {
+      display: block;
+      font-size: 2.5rem;
+      margin-bottom: 10px;
     }
 
     .options a:hover {
@@ -65,7 +84,9 @@
     }
 
     footer {
-      margin-top: 60px;
+      background-color: transparent;
+      text-align: center;
+      padding: 20px 0;
       font-size: 1rem;
       color: #333;
     }
@@ -84,8 +105,12 @@
       }
 
       .options a {
-        font-size: 1.2rem;
-        padding: 20px 30px;
+        font-size: 1.1rem;
+        padding: 25px 30px;
+      }
+
+      .options a i {
+        font-size: 2rem;
       }
     }
   </style>
@@ -96,15 +121,15 @@
     <p>Check out which website suits you best</p>
 
     <div class="options">
-      <a href="ecommerce.html">E-commerce</a>
-      <a href="brand.html">Brand</a>
-      <a href="portfolio.html">Portfolio</a>
+      <a href="ecommerce.html"><i class="fas fa-shopping-cart"></i>E-commerce</a>
+      <a href="brand.html"><i class="fas fa-bullhorn"></i>Brand</a>
+      <a href="portfolio.html"><i class="fas fa-user-astronaut"></i>Portfolio</a>
     </div>
-
-    <footer>
-      © 2025 Website Builder. All rights reserved.
-    </footer>
   </div>
+
+  <footer>
+    © 2025 Website Builder. All rights reserved.
+  </footer>
 
   <!-- Background music: Italian café style -->
   <audio autoplay loop>
