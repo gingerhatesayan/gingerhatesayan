@@ -25,19 +25,19 @@
       font-family: 'Playfair Display', serif;
       background-color: var(--pastel-orange);
       color: #333;
+      overflow: hidden;
     }
 
     body {
       display: flex;
       flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
 
     .container {
-      flex: 1;
-      max-width: 1000px;
-      margin: auto;
-      padding: 40px 20px;
       text-align: center;
+      animation: fadeIn 1.5s ease;
     }
 
     h1 {
@@ -66,11 +66,17 @@
       padding: 50px 60px;
       font-size: 2rem;
       border-radius: 20px;
-      transition: transform 0.3s ease, background 0.3s ease;
+      transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
       box-shadow: 0 10px 20px rgba(0,0,0,0.2);
       min-width: 260px;
       text-align: center;
+      animation: floatIn 1s ease forwards;
+      opacity: 0;
     }
+
+    .options a:nth-child(1) { animation-delay: 0.3s; }
+    .options a:nth-child(2) { animation-delay: 0.5s; }
+    .options a:nth-child(3) { animation-delay: 0.7s; }
 
     .options a i {
       display: block;
@@ -80,19 +86,31 @@
 
     .options a:hover {
       background: linear-gradient(135deg, #006400, var(--dark-red));
-      transform: scale(1.07);
+      transform: scale(1.08);
+      box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
     }
 
     footer {
-      background-color: transparent;
+      position: absolute;
+      bottom: 10px;
+      width: 100%;
       text-align: center;
-      padding: 20px 0;
       font-size: 1.1rem;
       color: #333;
     }
 
     audio {
       display: none;
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(-30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes floatIn {
+      to { opacity: 1; transform: translateY(0); }
+      from { opacity: 0; transform: translateY(30px); }
     }
 
     @media (max-width: 600px) {
