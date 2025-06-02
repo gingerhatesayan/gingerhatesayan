@@ -31,12 +31,13 @@
     body {
       display: flex;
       flex-direction: column;
-      justify-content: center;
       align-items: center;
+      padding-top: 60px;
     }
 
     .container {
       text-align: center;
+      width: 100%;
       animation: fadeIn 1.5s ease;
     }
 
@@ -49,7 +50,7 @@
     p {
       font-size: 1.7rem;
       color: #444;
-      margin-bottom: 50px;
+      margin-bottom: 60px;
     }
 
     .options {
@@ -57,6 +58,8 @@
       justify-content: center;
       flex-wrap: wrap;
       gap: 40px;
+      animation: floatIn 1.5s ease;
+      margin-top: 50px;
     }
 
     .options a {
@@ -70,8 +73,8 @@
       box-shadow: 0 10px 20px rgba(0,0,0,0.2);
       min-width: 260px;
       text-align: center;
-      animation: floatIn 1s ease forwards;
       opacity: 0;
+      animation: floatIn 1s ease forwards;
     }
 
     .options a:nth-child(1) { animation-delay: 0.3s; }
@@ -109,8 +112,8 @@
     }
 
     @keyframes floatIn {
-      to { opacity: 1; transform: translateY(0); }
       from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     @media (max-width: 600px) {
